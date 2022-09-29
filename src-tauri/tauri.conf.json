@@ -56,11 +56,11 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 400,
+        "height": 250,
         "resizable": false,
-        "alwaysOnTop": false,
-        "title": "first_tauri",
-        "width": 300
+        "alwaysOnTop": true,
+        "title": "Coin Flip",
+        "width": 400
       }
     ]
   }

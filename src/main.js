@@ -5,10 +5,15 @@ let greetMsgEl;
 
 let textOutput;
 
+let buttonHeads;
+let buttonTails;
+
 window.addEventListener("DOMContentLoaded", () => {
   greetInputEl = document.querySelector("#greet-input");
   greetMsgEl = document.querySelector("#greet-msg");
   textOutput = document.querySelector("#txt_output");
+  buttonHeads = document.querySelector("#btn_heads");
+  buttonTails = document.querySelector("#btn_tails");
 });
 
 async function greet() {
@@ -25,6 +30,21 @@ async function new_count() {
   textOutput.textContent = temp;
 }
 
+async function flip(x) {
+  var result = await invoke("flip_coin", {guess : x});
+  textOutput.textContent = result;
+  buttonHeads.disabled = true;
+  buttonTails.disabled = true;
+
+  setTimeout( () => {
+    textOutput.textContent = "Kopf oder Zahl?"
+
+    buttonHeads.disabled = false;
+    buttonTails.disabled = false;
+  }, 2000)
+}
+
 window.greet = greet;
 window.count = count;
 window.new_count = new_count;
+window.flip = flip;

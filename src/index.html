@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <link rel="stylesheet" href="style.css" /><!-- -->
+     <link rel="stylesheet" href="tw_style.css" /><!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Tauri App</title>
     <script type="module" src="/main.js" defer></script>
@@ -14,12 +14,22 @@
     </style> -->
   </head>
 
-  <body>
-    <div class="container">
-      <h2>Hallo dies ist meine erste Tauri App!</h2>
+  <body class=" font-serif text-slate-50 bg-gradient-to-tr from-gray-700 to-neutral-700 select-none">
+    <div class="container grid align-middle">
       
-      <button type="button" onclick="new_count()">Drück mich!</button>
-      <span id="txt_output">Hier steht Text</span>
+      <span class="container align-middle place-content-center text-center my-2 text-xl">Willkommen bei Kopf oder Zahl!</span>
+      
+      <div class="grid grid-cols-2">
+        <button id="btn_heads" type="button" onclick="flip(0)" class=" p-2 m-1 rounded-md shadow-md bg-gradient-to-tr from-slate-300 to-gray-600  hover:from-blue-300 disabled:opacity-25 disabled:hover:from-slate-300 disabled:hover:to-gray-600">
+          Kopf
+        </button>
+        <button id="btn_tails" type="button" onclick="flip(1)" class=" p-2 m-1 rounded-md shadow-md bg-gradient-to-tr from-slate-300 to-gray-600  hover:from-blue-300 disabled:opacity-25 disabled:hover:from-slate-300 disabled:hover:to-gray-600">
+          Zahl
+        </button>  
+      </div>
+      
+      <span class="container text-2xl text-yellow-500 text-center place-content-center mt-5" id="txt_output" >Kopf oder Zahl?</span>
+      
     </div>
   </body>
 </html>
